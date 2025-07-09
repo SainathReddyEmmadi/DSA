@@ -38,6 +38,7 @@ class SinglyLinkedList {
    * @param {*} val - Value to add
    */
   prepend(val) {
+    // Your next pointer should point to whatever the current head is pointing to
     const newNode = new ListNode(val, this.head);
     this.head = newNode;
     this.size++;
@@ -116,23 +117,21 @@ class SinglyLinkedList {
     if (!this.head) {
       return null;
     }
-
     if (!this.head.next) {
       const removedVal = this.head.val;
       this.head = null;
       this.size--;
       return removedVal;
     }
-
+    let previous = null;
     let current = this.head;
-    while (current.next.next) {
+    while (current.next) {
+      previous = current;
       current = current.next;
     }
-
-    const removedVal = current.next.val;
-    current.next = null;
+    previous.next = current.next;
     this.size--;
-    return removedVal;
+    return current.val;
   }
 
   /**
@@ -145,20 +144,18 @@ class SinglyLinkedList {
     if (index < 0 || index >= this.size) {
       throw new Error("Index out of bounds");
     }
-
     if (index === 0) {
       return this.removeFirst();
     }
-
+    let previous = null;
     let current = this.head;
-    for (let i = 0; i < index - 1; i++) {
+    for (let i = 0; i < index; i++) {
+      previous = current;
       current = current.next;
     }
-
-    const removedVal = current.next.val;
-    current.next = current.next.next;
+    previous.next = current.next;
     this.size--;
-    return removedVal;
+    return current.val;
   }
 
   /**
@@ -176,18 +173,17 @@ class SinglyLinkedList {
       this.removeFirst();
       return true;
     }
-
+    let previous = null;
     let current = this.head;
-    while (current.next && current.next.val !== val) {
+    while (current) {
+      if (current.val === val) {
+        previous.next = current.next;
+        this.size--;
+        return true;
+      }
+      previous = current;
       current = current.next;
     }
-
-    if (current.next) {
-      current.next = current.next.next;
-      this.size--;
-      return true;
-    }
-
     return false;
   }
 
