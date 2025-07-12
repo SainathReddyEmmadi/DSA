@@ -86,12 +86,19 @@ Enqueue → [1][2][3] → Dequeue
 
 ## 🏆 Essential LeetCode Problems
 
-### Stack Problems
+### Stack Problems (Easy)
 
 1. **[Valid Parentheses (20)](problems/001-valid-parentheses.js)** - Easy
 
    - Pattern: Matching pairs with stack
    - Concepts: Character mapping, stack validation
+
+2. **[Next Greater Element I (496)](problems/012-next-greater-element-i.js)** - Easy
+
+- Pattern: Monotonic stack with HashMap
+- Concepts: Next greater element, stack preprocessing
+
+### Stack Problems (Medium)
 
 2. **[Min Stack (155)](problems/002-min-stack.js)** - Medium
 
@@ -108,25 +115,68 @@ Enqueue → [1][2][3] → Dequeue
    - Pattern: Monotonic stack
    - Concepts: Next greater element problems
 
+5. **[Decode String (394)](problems/008-decode-string.js)** - Medium
+
+   - Pattern: Stack for nested structures
+   - Concepts: String processing, nested parsing
+
+6. **[Simplify Path (71)](problems/011-simplify-path.js)** - Medium
+
+- Pattern: Stack for path processing
+- Concepts: String parsing, directory navigation
+
+13. **[Next Greater Element II (503)](problems/013-next-greater-element-ii.js)** - Medium
+
+- Pattern: Monotonic stack with circular array
+- Concepts: Circular array processing, stack optimization
+
+16. **[Flatten Nested List Iterator (341)](problems/016-flatten-nested-list-iterator.js)** - Medium
+
+- Pattern: Stack/Queue for tree traversal
+- Concepts: Iterator design, nested structure processing
+
+### Stack Problems (Hard)
+
 5. **[Largest Rectangle in Histogram (84)](problems/005-largest-rectangle-histogram.js)** - Hard
+
    - Pattern: Monotonic stack with area calculation
-   - Concepts: Stack-based optimization
+   - Concepts: Stack-based optimization, histogram processing
 
-### Queue Problems
+6. **[Trapping Rain Water (42)](problems/014-trapping-rain-water.js)** - Hard
 
-6. **[Implement Queue using Stacks (232)](problems/006-queue-using-stacks.js)** - Easy
+- Pattern: Monotonic stack for boundaries
+- Concepts: Water level calculation, stack boundaries
+
+15. **[Maximal Rectangle (85)](problems/015-maximal-rectangle.js)** - Hard
+
+- Pattern: Histogram approach with 2D matrix
+- Concepts: Matrix to histogram conversion, dynamic programming
+
+### Queue Problems (Easy)
+
+9. **[Implement Queue using Stacks (232)](problems/009-queue-using-stacks.js)** - Easy
 
    - Pattern: Data structure conversion
    - Concepts: Stack-to-queue transformation
 
-7. **[Sliding Window Maximum (239)](problems/007-sliding-window-maximum.js)** - Hard
+10. **[Implement Stack using Queues (225)](problems/010-stack-using-queues.js)** - Easy
 
-   - Pattern: Deque for window operations
-   - Concepts: Monotonic deque, sliding window
+- Pattern: Data structure conversion
+- Concepts: Queue-to-stack transformation
 
-8. **[Design Circular Queue (622)](problems/008-design-circular-queue.js)** - Medium
-   - Pattern: Circular buffer implementation
-   - Concepts: Index management, wrap-around logic
+### Queue Problems (Medium)
+
+18. **[Design Circular Queue (622)](problems/018-design-circular-queue.js)** - Medium
+
+- Pattern: Circular buffer implementation
+- Concepts: Index management, wrap-around logic
+
+### Queue Problems (Hard)
+
+17. **[Sliding Window Maximum (239)](problems/017-sliding-window-maximum.js)** - Hard
+
+- Pattern: Deque for window operations
+- Concepts: Monotonic deque, sliding window optimization
 
 ## 🔧 Implementation Highlights
 
